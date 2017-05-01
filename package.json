@@ -1,0 +1,29 @@
+{
+  "name": "node-red-contrib-sonoff-tasmota",
+  "version": "1.0.0",
+  "description": "Connect Sonoff Devices running the Sonoff-Tasmota firmware easy to node red",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/steffenmllr/node-red-contrib-sonoff-tasmota"
+  },
+  "author": "Steffen Müller",
+  "license": "MIT",
+  "devDependencies": {
+    "xo": "^0.18.1"
+  },
+  "node-red": {
+    "nodes": {
+      "Sonoff device": "sonoff.js"
+    }
+  },
+  "xo": {
+    "space": 4
+  },
+  "scripts": {
+    "test": "xo"
+  },
+  "dependencies": {
+    "debug": "^2.6.6"
+  }
+}

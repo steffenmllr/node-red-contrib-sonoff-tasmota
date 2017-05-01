@@ -1,0 +1,65 @@
+<script type="text/javascript">
+RED.nodes.registerType('Sonoff device', {
+    category: 'Sonoff',
+    color: '#28AFB0',
+    defaults: {
+        broker: { type: 'mqtt-broker', required: true },
+        id: { value: 'sonoff', required: true },
+        name: { value: ''},
+        onValue: { value: 'ON' },
+        offValue: { value: 'OFF' },
+        cmdPrefix: { value: 'cmnd' },
+        statPrefix: { value: 'stat' },
+        telePrefix: { value: 'tele' }
+    },
+    icon: 'bridge.png',
+    inputs: 1,
+    outputs: 1,
+    label: function() {
+        return this.name || this.id;
+    }
+});
+</script>
+
+<script type="text/x-red" data-template-name="Sonoff device">
+
+    <div class="form-row">
+        <label for="node-input-id"><i class="icon-tag"></i> Id</label>
+        <input type="text" id="node-input-id" placeholder="Sonoff id (Default: sonoff)">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-broker"><i class="fa fa-globe"></i> Mqtt</label>
+        <input type="text" id="node-input-broker">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-onValue"><i class="fa fa-toggle-on"></i> On</label>
+        <input type="text" id="node-input-onValue" placeholder="onValue (Default: On)">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-offValue"><i class="fa fa-toggle-off"></i> Off</label>
+        <input type="text" id="node-input-offValue" placeholder="offValue (Default: OFF)">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-cmdPrefix"><i class="fa fa-comment"></i> cmd</label>
+        <input type="text" id="node-input-cmdPrefix" placeholder="cmdPrefix (Default: cmd)">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-statPrefix"><i class="fa fa-comment"></i> stat</label>
+        <input type="text" id="node-input-statPrefix" placeholder="statPrefix (Default: stat)">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-telePrefix"><i class="fa fa-comment"></i> tele</label>
+        <input type="text" id="node-input-telePrefix" placeholder="telePrefix (Default: tele)">
+    </div>
+</script>
