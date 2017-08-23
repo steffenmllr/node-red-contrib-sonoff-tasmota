@@ -11,13 +11,13 @@ module.exports = function (RED) {
         const brokerConnection = RED.nodes.getNode(config.broker);
 
         // Topics
-        const topicTeleLWT = `${config.telePrefix}/${config.id}/LWT`;
+        const topicTeleLWT = `${config.id}/${config.telePrefix}/LWT`;
 
-        const topicCmdPower = `${config.cmdPrefix}/${config.id}/power`;
-        const topicCmdStatus = `${config.cmdPrefix}/${config.id}/status`;
+        const topicCmdPower = `${config.id}/${config.cmdPrefix}/power`;
+        const topicCmdStatus = `${config.id}/${config.cmdPrefix}/status`;
 
-        const topicStatsPower = `${config.statPrefix}/${config.id}/POWER`;
-        const topicStatsStatus = `${config.statPrefix}/${config.id}/STATUS`;
+        const topicStatsPower = `${config.id}/${config.statPrefix}/POWER`;
+        const topicStatsStatus = `${config.id}/${config.statPrefix}/STATUS`;
 
         if (brokerConnection) {
             brokerConnection.register(this);
