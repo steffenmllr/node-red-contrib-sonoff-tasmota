@@ -12,6 +12,9 @@ Install `node-red-contrib-sonoff-tasmota` using [npm](https://www.npmjs.com/):
 npm install --save node-red-contrib-sonoff-tasmota
 ```
 
+## Legacy Versions
+Use `npm install --save node-red-contrib-sonoff-tasmota@1.0.0` if you are using version <=5.0.5 of the firmware due to [this change](https://github.com/arendst/Sonoff-Tasmota/wiki/MQTT-Features#mqtt-topic-definition). 
+
 ## Usage
 
 To use the node, just drag the node from the Sonoff section to the Flow, add the id and the mqtt broker. 
