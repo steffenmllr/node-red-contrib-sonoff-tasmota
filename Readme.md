@@ -23,6 +23,7 @@ To control the switch you can use a true/false input node or connect a UI Button
 
 ```json
 [{
+    "mode": "0",
     "id": "light_livingroom",
     "type": "Sonoff device",
     "z": "c99f41b0.86e72",
