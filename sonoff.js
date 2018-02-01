@@ -11,22 +11,22 @@ module.exports = function (RED) {
         const brokerConnection = RED.nodes.getNode(config.broker);
 
         // Topics
-        var topicTeleLWT = `${config.telePrefix}/${config.id}/LWT`;
+        var topicTeleLWT = `${config.telePrefix}/${config.device}/LWT`;
 
-        var topicCmdPower = `${config.cmdPrefix}/${config.id}/power`;
-        var topicCmdStatus = `${config.cmdPrefix}/${config.id}/status`;
+        var topicCmdPower = `${config.cmdPrefix}/${config.device}/power`;
+        var topicCmdStatus = `${config.cmdPrefix}/${config.device}/status`;
 
-        var topicStatsPower = `${config.statPrefix}/${config.id}/POWER`;
-        var topicStatsStatus = `${config.statPrefix}/${config.id}/STATUS`;
+        var topicStatsPower = `${config.statPrefix}/${config.device}/POWER`;
+        var topicStatsStatus = `${config.statPrefix}/${config.device}/STATUS`;
 
         if(config.mode == 1){ //Custom (%topic%/%prefix%/)
-            topicTeleLWT = `${config.id}/${config.telePrefix}/LWT`;
+            topicTeleLWT = `${config.device}/${config.telePrefix}/LWT`;
 
-            topicCmdPower = `${config.id}/${config.cmdPrefix}/power`;
-            topicCmdStatus = `${config.id}/${config.cmdPrefix}/status`;
+            topicCmdPower = `${config.device}/${config.cmdPrefix}/power`;
+            topicCmdStatus = `${config.device}/${config.cmdPrefix}/status`;
 
-            topicStatsPower = `${config.id}/${config.statPrefix}/POWER`;
-            topicStatsStatus = `${config.id}/${config.statPrefix}/STATUS`;
+            topicStatsPower = `${config.device}/${config.statPrefix}/POWER`;
+            topicStatsStatus = `${config.device}/${config.statPrefix}/STATUS`;
         }
 
         if (brokerConnection) {

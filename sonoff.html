@@ -5,7 +5,7 @@ RED.nodes.registerType('Sonoff device', {
     defaults: {
         mode:{ value: '0'},
         broker: { type: 'mqtt-broker', required: true },
-        id: { value: 'sonoff', required: true },
+        device: { value: 'sonoff', required: true },
         name: { value: ''},
         onValue: { value: 'ON' },
         offValue: { value: 'OFF' },
@@ -17,7 +17,7 @@ RED.nodes.registerType('Sonoff device', {
     inputs: 1,
     outputs: 1,
     label: function() {
-        return this.name || this.id;
+        return this.name || this.device;
     }
 });
 </script>
@@ -31,8 +31,8 @@ RED.nodes.registerType('Sonoff device', {
         </select>
     </div>
     <div class="form-row">
-        <label for="node-input-id"><i class="icon-tag"></i> Id</label>
-        <input type="text" id="node-input-id" placeholder="Sonoff id (Default: sonoff)">
+        <label for="node-input-device"><i class="icon-tag"></i> Id</label>
+        <input type="text" id="node-input-device" placeholder="Sonoff id (Default: sonoff)">
     </div>
 
     <div class="form-row">
